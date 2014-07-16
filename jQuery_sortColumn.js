@@ -16,7 +16,7 @@ jQuery.fn.sortColumn = function (options) {
         return function (a, b) {
             var dataA=jQuery(a).children("td:nth-child("+index+")").html();
             var dataB=jQuery(b).children("td:nth-child("+index+")").html();
-            
+            // Format : dd-mm-yyyy
             if (format=='dd-mm-yyyy'){
 	            if (dataA==""){
 	                dataA='01-01-1970';
@@ -38,7 +38,7 @@ jQuery.fn.sortColumn = function (options) {
 	            else 
 	                return -1;
 	        }
-
+	        // Format : dd/mm/yyyy
 	        if (format=='dd/mm/yyyy'){
 	            if (dataA==""){
 	                dataA='01/01/1970';
@@ -60,11 +60,11 @@ jQuery.fn.sortColumn = function (options) {
 	            else 
 	                return -1;
 	        }
-
+	        // Format : number
 	        if (format=='number'){
 	        	return dataA-dataB;
 	        }
-
+	        // Format : currency
 	        if (format=='currency'){
 	        	dataA=dataA.replace(/$/g,'');
 	        	dataA=dataA.replace(/,/g,'');
@@ -77,8 +77,6 @@ jQuery.fn.sortColumn = function (options) {
         };
     }
 
-    
-    
     var original=[];
     var sorte=[];
     $table.children("tbody").children("tr").each(function(index,ele){
@@ -94,7 +92,7 @@ jQuery.fn.sortColumn = function (options) {
 };
 // Default parameter
 jQuery.fn.sortColumn.defaults = {
-    index: 1,
+    index: 1, /* index is 1 based instead of 0 based because of css nth:child(index) */
     order: 'asc',
     format: 'string'
 };
