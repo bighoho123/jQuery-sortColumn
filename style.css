@@ -1,0 +1,27 @@
+.container {
+	max-width:768px;
+	margin:0 auto;
+}
+html, button, input, select, textarea,
+.pure-g [class *= "pure-u"] {
+    font-family: 'Dosis', sans-serif;
+}
+.header {
+	background-color: #0B1013;
+}
+body {
+	background: url(http://subtlepatterns.com/patterns/skulls.png);
+	height:2000px;
+}
+.content {
+	margin-top: 250px;
+}
+table th {
+	text-align: center;
+	cursor:pointer;
+}
+
+.footer {
+	text-align: center;
+	margin-top: 50px;
+}
