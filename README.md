@@ -15,8 +15,20 @@ A jQuery plugin to sort the specific column in a table
 	```html
 	<script src='path/to/src/jQuery_sortColumn.js'></script>
 	```
+2. Declare the table with standard structure
 
-2. Sort the specific column simply by calling
+	```html
+	<table>
+		<thead>
+			<!-- header -->
+		</thead>
+		<tbody>
+			<!-- content -->
+		</tbody>
+	</table>
+	```
+
+3. Sort the specific column simply by calling
 
 	```javascript
 	jQuery("table").sortColumn{{
@@ -32,4 +44,4 @@ A jQuery plugin to sort the specific column in a table
 	| order     | *'asc'*  | 'desc' |
 	| format    | 'string'* | 'number' or 'currency' or 'dd/mm/yyyy' or 'dd-mm-yyyy'|
 
-3. Party o(︶︿︶)o 
+4. Party o(∩_∩)o 
