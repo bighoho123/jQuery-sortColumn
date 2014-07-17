@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jQuery_sortColumn.js Demo</title>
+	<link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.5.0/pure-min.css">
+	<link rel="stylesheet" href="style.css">
+	<link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+	<div class='header'>
+		<div class='pure-g container'>
+			<div class='pure-u-1' style='text-align:center'>
+				<h1 style='color:#FFFFFF'>jQuery_sortColumn.js Demo</h1>
+			</div>
+		</div>
+	</div>
+	<div class='content'>
+		<div class='pure-g container'>
+			<div class='pure-u-1' style='text-align:center'>
+				<table class='pure-table pure-table-striped' style='width:100%' id='table'>
+					<thead>
+						<tr>
+							<th id='header1'>String <i class="fa fa-sort"></i></th>
+							<th id='header2'>Number <i class="fa fa-sort"></i></th>
+							<th id='header3'>DD-MM-YYYY <i class="fa fa-sort"></i></th>
+							<th id='header4'>DD/MM/YYYY <i class="fa fa-sort"></i></th>
+							<th id='header5'>Currency <i class="fa fa-sort"></i></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Adam</td>
+							<td>300</td>
+							<td>05-06-2011</td>
+							<td>10/09/1970</td>
+							<td>$1,999.00</td>
+						</tr>
+						<tr>
+							<td>Jonh</td>
+							<td>457</td>
+							<td>10-09-1950</td>
+							<td>01/01/2013</td>
+							<td>$199.00</td>
+						</tr>
+						<tr>
+							<td>Peter</td>
+							<td>78</td>
+							<td>02-05-1987</td>
+							<td>05/06/2011</td>
+							<td>$1,000,000.00</td>
+						</tr>
+						<tr>
+							<td>Sam</td>
+							<td>3</td>
+							<td>01-01-2013</td>
+							<td>23/6/1988</td>
+							<td>$0.23</td>
+						</tr>
+						<tr>
+							<td>Zack</td>
+							<td>331</td>
+							<td>12-06-2011</td>
+							<td>02/05/1987</td>
+							<td>$0.01</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class='footer'>
+		Click on the column header to show the result<br>
+		Usage can be found at <a href='https://github.com/bighoho123/jQuery-sortColumn'>Github <i class="fa fa-github"></i></a>
+	</div>
+</body>
+<!-- Import jQuery -->
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src='jQuery_sortColumn.js'></script>
+<script type="text/javascript">
+	var sortOrder1='asc';
+	jQuery('#header1').click(function(){
+	    if (sortOrder1=='asc'){
+	        jQuery("#table").sortColumn({
+	            index: 1,
+	            order: 'desc',
+	            format: 'string'
+	        });
+	        sortOrder1='desc';
+	    } else {
+	        jQuery("#table").sortColumn({
+	            index: 1,
+	            order: 'asc',
+	            format: 'string'
+	        });
+	        sortOrder1='asc';
+	    }
+	});
+	var sortOrder2='asc';
+	jQuery('#header2').click(function(){
+	    if (sortOrder2=='asc'){
+	        jQuery("#table").sortColumn({
+	            index: 2,
+	            order: 'desc',
+	            format: 'number'
+	        });
+	        sortOrder2='desc';
+	    } else {
+	        jQuery("#table").sortColumn({
+	            index: 2,
+	            order: 'asc',
+	            format: 'number'
+	        });
+	        sortOrder2='asc';
+	    }
+	});
+	var sortOrder3='asc';
+	jQuery('#header3').click(function(){
+	    if (sortOrder3=='asc'){
+	        jQuery("#table").sortColumn({
+	            index: 3,
+	            order: 'desc',
+	            format: 'dd-mm-yyyy'
+	        });
+	        sortOrder3='desc';
+	    } else {
+	        jQuery("#table").sortColumn({
+	            index: 3,
+	            order: 'asc',
+	            format: 'dd-mm-yyyy'
+	        });
+	        sortOrder3='asc';
+	    }
+	});
+	var sortOrder4='asc';
+	jQuery('#header4').click(function(){
+	    if (sortOrder4=='asc'){
+	        jQuery("#table").sortColumn({
+	            index: 4,
+	            order: 'desc',
+	            format: 'dd/mm/yyyy'
+	        });
+	        sortOrder4='desc';
+	    } else {
+	        jQuery("#table").sortColumn({
+	            index: 4,
+	            order: 'asc',
+	            format: 'dd/mm/yyyy'
+	        });
+	        sortOrder4='asc';
+	    }
+	});
+	var sortOrder5='asc';
+	jQuery('#header5').click(function(){
+	    if (sortOrder5=='asc'){
+	        jQuery("#table").sortColumn({
+	            index: 5,
+	            order: 'desc',
+	            format: 'currency'
+	        });
+	        sortOrder5='desc';
+	    } else {
+	        jQuery("#table").sortColumn({
+	            index: 5,
+	            order: 'asc',
+	            format: 'currency'
+	        });
+	        sortOrder5='asc';
+	    }
+	});
+</script>
+</html>

@@ -66,13 +66,22 @@ jQuery.fn.sortColumn = function (options) {
 	        }
 	        // Format : currency
 	        if (format=='currency'){
-	        	dataA=dataA.replace(/$/g,'');
-	        	dataA=dataA.replace(/,/g,'');
-	        	dataB=dataB.replace(/$/g,'');
-	        	dataB=dataB.replace(/,/g,'');
+	        	dataA=dataA.replace(/\$/g,'');
+	        	dataA=dataA.replace(/\,/g,'');
+	        	dataB=dataB.replace(/\$/g,'');
+	        	dataB=dataB.replace(/\,/g,'');
 	        	return dataA-dataB;
 	        }
 
+	        if (format=='string') {
+	        	if (dataA>dataB) {
+	        		return 1;
+	        	} else if (dataA==dataB) {
+	        		return 0;
+	        	} else {
+	        		return -1;
+	        	}
+	        }
             
         };
     }
