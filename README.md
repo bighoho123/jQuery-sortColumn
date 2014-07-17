@@ -1,6 +1,8 @@
 jQuery-sortColumn
 =================
 
+##[Demo]("http://bighoho123.github.io/jQuery-sortColumn/")##
+
 ##Introduction##
 
 A jQuery plugin to sort the specific column in a table
