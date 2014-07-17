@@ -1,7 +1,8 @@
 jQuery-sortColumn
 =================
 
-##[Demo]("http://bighoho123.github.io/jQuery-sortColumn/")##
+##[Demo](http://bighoho123.github.io/jQuery-sortColumn/)##
+
 
 ##Introduction##
 
