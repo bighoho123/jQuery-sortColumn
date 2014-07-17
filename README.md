@@ -24,5 +24,12 @@ A jQuery plugin to sort the specific column in a table
 		/* ... */
 	}}
 	```
+	
+	Only **index** is compulsary. The other available options are:
+	
+	| Option    | Default  | other values |
+	| --------- | -------- | --------|
+	| order     | *'asc'*  | 'desc' |
+	| format    | 'string'* | 'number' or 'currency' or 'dd/mm/yyyy' or 'dd-mm-yyyy'|
 
 3. Party o(︶︿︶)o 
