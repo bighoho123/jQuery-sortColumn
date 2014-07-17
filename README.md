@@ -45,3 +45,9 @@ A jQuery plugin to sort the specific column in a table
 	| format    | 'string'* | 'number' or 'currency' or 'dd/mm/yyyy' or 'dd-mm-yyyy'|
 
 4. Party o(∩_∩)o 
+
+##FAQ##
+
+- Why my jQuery click event is not working after sorting?
+
+	You probably used the `jQuery(element).click()` to bind the event. Since sorting changed the DOM structure. This **direct binding** does not work on the new element. Solutions are either to use html `onclick` inline attribute or use **delegated binding** instead (`jQuery(table).on('click','element',function(){})`). More info can be find [here](http://api.jquery.com/on/#direct-and-delegated-events)
