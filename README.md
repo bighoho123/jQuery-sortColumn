@@ -37,7 +37,7 @@ A jQuery plugin to sort the specific column in a table
 	}}
 	```
 	
-	Only **index** is compulsary. The other available options are:
+	Only **index** is compulsory. The other available options are:
 	
 	| Option    | Default  | other values |
 	| --------- | -------- | --------|
